@@ -4,12 +4,14 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <t:layout>
     <jsp:body>
-        <h1>Welcome!</h1>
+        <h1>Greetings!</h1>
         ${name}
+        <br/>
+        <h1>Org : ${company}</h1>
         <hr/>
-        Spring MVC http://localhost:8080/SpringMvcGlassFish4/admin/springmvc/greeting/on<br>
+        Spring MVC https://localhost:8181/SpringMvcGlassFish4/admin/springmvc/greeting/on<br>
         <code>com.iqmsoft.glassfish4.spring.admin.controllers.SpringmvcController</code><br>
-        Jax-rs http://localhost:8080/SpringMvcGlassFish4/api/jaxrs (curl -i -H "Accept: application/json" "http://localhost:8080/springmvcrest/api/springrest/users")<br>
+        Jax-rs https://localhost:8181/SpringMvcGlassFish4/api/jaxrs (curl -i -H "Accept: application/json" "https://localhost:8181/SpringMvcGlassFish4/api/springrest/users")<br>
         <code>com.iqmsoft.glassfish4.spring.resources.SpringrestController</code>
         <hr/> 
        

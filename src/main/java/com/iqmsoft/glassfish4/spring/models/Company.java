@@ -30,8 +30,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Company.findAll", query = "SELECT t FROM Company t"),
     @NamedQuery(name = "Company.findById", query = "SELECT t FROM Company t WHERE t.id = :id"),
     @NamedQuery(name = "Company.findByName", query = "SELECT t FROM Company t WHERE t.name = :name"),
-    @NamedQuery(name = "Company.findByCreated", query = "SELECT t FROM Company t WHERE t.created = :created"),
-    @NamedQuery(name = "Company.findByModified", query = "SELECT t FROM Company t WHERE t.modified = :modified")
 })
 public class Company implements Serializable {
     
@@ -49,17 +47,6 @@ public class Company implements Serializable {
     @Column(name = "name")
     private String name;
     
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "created")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date created;
-    
-    @Basic(optional = false)
-    @NotNull
-    @Column(name = "modified")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date modified;
     
     @XmlTransient
     @OneToMany(mappedBy = "company")
@@ -72,11 +59,10 @@ public class Company implements Serializable {
         this.name = name;
     }
 
-    public Company(Integer id, String name, Date created, Date modified) {
-        this.id = id;
+    public Company(Integer id, String name) {
+    	this.id = id;
         this.name = name;
-        this.created = created;
-        this.modified = modified;
+    
     }
 
     public Integer getId() {
@@ -95,21 +81,7 @@ public class Company implements Serializable {
         this.name = name;
     }
 
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public Date getModified() {
-        return modified;
-    }
-
-    public void setModified(Date modified) {
-        this.modified = modified;
-    }
+   
 
     @XmlTransient
     public List<User> getUserCollection() {
