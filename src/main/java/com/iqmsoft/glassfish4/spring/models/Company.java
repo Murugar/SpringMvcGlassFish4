@@ -51,6 +51,31 @@ public class Company implements Serializable {
     @XmlTransient
     @OneToMany(mappedBy = "company")
     private List<User> userCollection;
+    
+    @Basic(optional = false)		
+    @Column(name = "created")	
+    private Date created;		
+        		
+    public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public Date getModified() {
+		return modified;
+	}
+
+	public void setModified(Date modified) {
+		this.modified = modified;
+	}
+
+	@Basic(optional = false)		
+   
+    @Column(name = "modified")		
+    private Date modified;
 
     public Company() {
     }
