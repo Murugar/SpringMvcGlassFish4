@@ -142,7 +142,7 @@ public class Company implements Serializable {
 
     @Override
     public String toString() {
-        return "com.katropine.models.Company[ id=" + id + " ]";
+        return "com.iqmsoft.glassfish4.spring.models.Company[ id=" + id + " ]";
     }
 
 }

@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.iqmsoft.glassfish4.spring.dao.BackendUserDaoLocal;
+import com.iqmsoft.glassfish4.spring.ejb3.BackendUserDaoLocal;
 import com.iqmsoft.glassfish4.spring.models.BackendUser;
 
 @Service("customUserDetailsService")

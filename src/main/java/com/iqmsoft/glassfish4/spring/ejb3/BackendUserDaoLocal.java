@@ -1,5 +1,5 @@
 
-package com.iqmsoft.glassfish4.spring.dao;
+package com.iqmsoft.glassfish4.spring.ejb3;
 
 import javax.ejb.Local;
 

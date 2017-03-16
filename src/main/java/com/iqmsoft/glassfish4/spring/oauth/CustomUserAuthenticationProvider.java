@@ -13,7 +13,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.iqmsoft.glassfish4.spring.dao.UserDaoLocal;
+import com.iqmsoft.glassfish4.spring.ejb3.UserDaoLocal;
 import com.iqmsoft.glassfish4.spring.models.User;
 
 public class CustomUserAuthenticationProvider implements AuthenticationProvider {

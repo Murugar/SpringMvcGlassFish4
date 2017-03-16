@@ -5,7 +5,7 @@ import javax.ejb.EJB;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
-import com.iqmsoft.glassfish4.spring.dao.UserDaoLocal;
+import com.iqmsoft.glassfish4.spring.ejb3.UserDaoLocal;
 import com.iqmsoft.glassfish4.spring.models.User;
 
 @Service

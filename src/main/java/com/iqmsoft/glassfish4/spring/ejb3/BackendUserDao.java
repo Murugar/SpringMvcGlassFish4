@@ -1,4 +1,4 @@
-package com.iqmsoft.glassfish4.spring.dao;
+package com.iqmsoft.glassfish4.spring.ejb3;
 
 import java.util.List;
 import javax.ejb.EJB;
