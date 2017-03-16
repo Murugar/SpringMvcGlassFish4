@@ -52,7 +52,8 @@ public class Company implements Serializable {
     @OneToMany(mappedBy = "company")
     private List<User> userCollection;
     
-    @Basic(optional = false)		
+    @Basic(optional = false)	
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created")	
     private Date created;		
         		
@@ -73,7 +74,7 @@ public class Company implements Serializable {
 	}
 
 	@Basic(optional = false)		
-   
+	@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "modified")		
     private Date modified;
 
