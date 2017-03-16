@@ -1,6 +1,7 @@
 package com.iqmsoft.glassfish4.spring.models;
 
 import java.io.Serializable;
+
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -21,6 +22,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "company")
@@ -52,31 +55,29 @@ public class Company implements Serializable {
     @OneToMany(mappedBy = "company")
     private List<User> userCollection;
     
-    @Basic(optional = false)	
-    @Temporal(TemporalType.TIMESTAMP)
+   
     @Column(name = "created")	
-    private Date created;		
+    private java.sql.Timestamp created;		
         		
-    public Date getCreated() {
+    public java.sql.Timestamp getCreated() {
 		return created;
 	}
 
-	public void setCreated(Date created) {
+	public void setCreated(java.sql.Timestamp created) {
 		this.created = created;
 	}
 
-	public Date getModified() {
+	public java.sql.Timestamp getModified() {
 		return modified;
 	}
 
-	public void setModified(Date modified) {
+	public void setModified(java.sql.Timestamp modified) {
 		this.modified = modified;
 	}
 
-	@Basic(optional = false)		
-	@Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "modified")		
-    private Date modified;
+	
+	@Column(name = "modified")		
+    private java.sql.Timestamp modified;
 
     public Company() {
     }
