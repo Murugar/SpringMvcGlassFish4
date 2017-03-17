@@ -10,6 +10,6 @@ INSERT INTO `backenduser` (`ID`, `EMAIL`, `PASSWORD`, `USERNAME`, `ENABLED`, `ro
 
 INSERT INTO Greeting (id, content) VALUES(1, 'Welcome');
 
-INSERT INTO company(id, name) VALUES (1, 'IQMSOFT');
+INSERT INTO company(id, name, created, modified) VALUES (1, 'IQMSOFT', now(), now());
 
 

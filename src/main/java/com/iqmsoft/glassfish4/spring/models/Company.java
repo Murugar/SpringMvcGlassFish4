@@ -24,6 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.hibernate.annotations.Type;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "company")
@@ -55,29 +56,34 @@ public class Company implements Serializable {
     @OneToMany(mappedBy = "company")
     private List<User> userCollection;
     
+    @Column(name = "modified", length = 19)	
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date modified;
    
-    @Column(name = "created")	
-    private java.sql.Timestamp created;		
+    @Column(name = "created", length = 19)
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date created;		
         		
-    public java.sql.Timestamp getCreated() {
+    public Date getCreated() {
 		return created;
 	}
 
-	public void setCreated(java.sql.Timestamp created) {
+	public void setCreated(Date created) {
 		this.created = created;
 	}
 
-	public java.sql.Timestamp getModified() {
+	public Date getModified() {
 		return modified;
 	}
 
-	public void setModified(java.sql.Timestamp modified) {
+	public void setModified(Date modified) {
 		this.modified = modified;
 	}
 
 	
-	@Column(name = "modified")		
-    private java.sql.Timestamp modified;
+	
 
     public Company() {
     }
